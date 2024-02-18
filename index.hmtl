@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POAM Assistance Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>POAM Assistance Tool</h1>
+    <form id="poamForm">
+        <label for="weakness">Weakness Identification:</label>
+        <input type="text" id="weakness" name="weakness" required>
+        
+        <label for="remediation">Remediation Plans:</label>
+        <textarea id="remediation" name="remediation" required></textarea>
+        
+        <label for="milestones">Milestones:</label>
+        <input type="text" id="milestones" name="milestones" required>
+        
+        <label for="responsible">Responsible Parties:</label>
+        <input type="text" id="responsible" name="responsible" required>
+        
+        <button type="button" id="submitForm">Generate POAM PDF</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
