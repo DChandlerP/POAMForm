@@ -9,18 +9,25 @@
 <body>
     <h1>POAM Assistance Tool</h1>
     <form id="poamForm">
-        <label for="weakness">Weakness Identification:</label>
-        <input type="text" id="weakness" name="weakness" required>
-        
-        <label for="remediation">Remediation Plans:</label>
-        <textarea id="remediation" name="remediation" required></textarea>
-        
-        <label for="milestones">Milestones:</label>
-        <input type="text" id="milestones" name="milestones" required>
-        
-        <label for="responsible">Responsible Parties:</label>
-        <input type="text" id="responsible" name="responsible" required>
-        
+        <div class="form-section"><label for="systemName">System Name:</label><input type="text" id="systemName" name="systemName" required></div>
+        <div class="form-section"><label for="impactLevel">Impact Level:</label><input type="text" id="impactLevel" name="impactLevel" required></div>
+        <div class="form-section"><label for="poamDate">POAM Date:</label><input type="date" id="poamDate" name="poamDate" required></div>
+        <div class="form-section">
+            <label for="vulnerability">Vulnerability:</label>
+            <textarea id="vulnerability" name="vulnerability" required></textarea>
+        </div>
+        <label for="remediationStatus">Remediation Status:</label>
+            <select id="remediationStatus" name="remediationStatus" required>
+                <option value="">Please select</option>
+                <option value="Not Started">Not Started</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+                <option value="Deferred">Deferred</option>
+            </select>
+        <div class="form-section">
+            <label for="completionDate">Completion Date:</label>
+            <input type="date" id="completionDate" name="completionDate">
+        </div>
         <button type="button" id="submitForm">Generate POAM PDF</button>
     </form>
 
